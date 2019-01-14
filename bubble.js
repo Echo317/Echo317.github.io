@@ -10,7 +10,7 @@ D3BarChart.prototype.draw = function( oControlHost )
 	var iWidth = ( o && o.Width ) ? o.Width : 500;
 	var iHeight = ( o && o.Height ) ? o.Height : 16;
 	var sBackgroundColor = ( o && o["Background color"] ) ? o["Background color"] : "#C8F08F";
-	var diameter = 600;
+	var diameter = 400;
 	var color = d3.scale.category20c();
 	var dataset =this.m_aData ;
 	console.log(this.m_aData);
