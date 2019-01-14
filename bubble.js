@@ -1,5 +1,5 @@
-define(["http://d3js.org/d3.v5.min.js"], function(d3) {
-  "use strict";
+define(["http://d3js.org/d3.v3.min.js"], function( d3 ) {
+"use strict";
 
 function D3BarChart()
 {
