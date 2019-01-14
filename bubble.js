@@ -1,4 +1,4 @@
-define(["http://d3js.org/d3.v3.min.js"], function( d3 ) {
+define(["https://Echo317.github.io/d3.min.js"], function( d3 ) {
 "use strict";
 
 function D3BarChart()
