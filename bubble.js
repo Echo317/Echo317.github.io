@@ -52,13 +52,8 @@ D3BarChart.prototype.draw = function( oControlHost )
 	var obj=d3.selectAll('circle')
 		.on('click',
 		function(d,i){
-				//values=d["name"]
-				//_this.getParameters(oControlHost, d["name"])
-				//alert(oControlHost.page.getControlsByName("_Para1").getValues());
-				//oControlHost.container.innerHTML=d["name"];
 				_this.f_onClick(oControlHost,d["name"])
-				
-				//console.log(1)
+
 		   }
 		   );
 };
