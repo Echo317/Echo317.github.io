@@ -1,11 +1,11 @@
-define(["https://echo317.github.io/d3.min.js"], function( d3 ) {
+define(["https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"], function( d3 ) {
 "use strict";
 
 function D3BarChart()
 {
 };
 D3BarChart.prototype.draw = function( oControlHost )
-{	this.m_sName = oControlHost.configuration.name || "para"; 
+{	
 	var o = oControlHost.configuration;
 	var iWidth = ( o && o.Width ) ? o.Width : 500;
 	var iHeight = ( o && o.Height ) ? o.Height : 16;
@@ -52,14 +52,20 @@ D3BarChart.prototype.draw = function( oControlHost )
 	var obj=d3.selectAll('circle')
 		.on('click',
 		function(d,i){
+				//values=d["name"]
+				//_this.getParameters(oControlHost, d["name"])
+				//alert(oControlHost.page.getControlsByName("_Para1").getValues());
+				//oControlHost.container.innerHTML=d["name"];
 				_this.f_onClick(oControlHost,d["name"])
+				
+				//console.log(1)
 		   }
 		   );
 };
-
 D3BarChart.prototype.f_onClick = function (oControlHost,paraValue) {
 	var oValues = [{'use': paraValue, 'display': paraValue}];
-	 oControlHost.page.getControlByName( this.m_sName  ).setValues( oValues ) ; 
+	 oControlHost.page.getControlByName('para').setValues( oValues ) ;
+	
 	 oControlHost.finish()
 	};
 
@@ -71,6 +77,7 @@ D3BarChart.prototype.setData = function( oControlHost, oDataStore )
 	for ( var iRow = 0; iRow < iRowCount; iRow++ ) {
 		var rec = {
 			"name" : oDataStore.getCellValue( iRow, 0),
+			//"year" : oDataStore.getCellValue( iRow, 1),
 			"value" : oDataStore.getCellValue( iRow, 1),
 			};
 		this.m_aData.push(rec);
