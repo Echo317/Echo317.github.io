@@ -1,4 +1,4 @@
-define(["https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"], function( d3 ) {
+define(["https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"], function( d3 ) {
 "use strict";
 
 function D3BarChart()
