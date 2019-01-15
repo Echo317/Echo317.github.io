@@ -11,7 +11,7 @@ D3BarChart.prototype.draw = function( oControlHost )
 	var iHeight = ( o && o.Height ) ? o.Height : 16;
 	var sBackgroundColor = ( o && o["Background color"] ) ? o["Background color"] : "#C8F08F";
 	var diameter = 400;
-	var color = d3.scale.category20c();
+	//var color = d3.scale.category20c();
 	var dataset =this.m_aData ;
 	console.log(this.m_aData);
     //var color = d3.scaleOrdinal(d3.schemeCategory20);
@@ -36,7 +36,7 @@ D3BarChart.prototype.draw = function( oControlHost )
         .attr("r", function(d){ return d.r; })
         .attr("cx", function(d){ return d.x; })
         .attr("cy", function(d){ return d.y; })
-        .style("fill", function(d) { return color(d.value); });
+        //.style("fill", function(d) { return color(d.value); });
 	//format the text for each bubble
     bubbles.append("text")
         .attr("x", function(d){ return d.x; })
