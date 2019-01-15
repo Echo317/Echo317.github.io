@@ -1,4 +1,4 @@
-define(["https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"], function( d3 ) {
+define(["http://d3js.org/d3.v3.min.js"], function( d3 ) {
 "use strict";
 
 function D3BarChart()
@@ -14,7 +14,7 @@ D3BarChart.prototype.draw = function( oControlHost )
 	//var color = d3.scale.category20c();
 	var dataset =this.m_aData ;
 	console.log(this.m_aData);
-    //var color = d3.scaleOrdinal(d3.schemeCategory20);
+    var color = d3.scaleOrdinal(d3.schemeCategory20);
 	var bubble = d3.layout.pack(dataset)
             .size([diameter, diameter])
             .padding(1.5);
@@ -36,7 +36,7 @@ D3BarChart.prototype.draw = function( oControlHost )
         .attr("r", function(d){ return d.r; })
         .attr("cx", function(d){ return d.x; })
         .attr("cy", function(d){ return d.y; })
-        //.style("fill", function(d) { return color(d.value); });
+        .style("fill", function(d) { return color(d.value); });
 	//format the text for each bubble
     bubbles.append("text")
         .attr("x", function(d){ return d.x; })
