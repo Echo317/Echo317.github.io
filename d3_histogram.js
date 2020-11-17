@@ -104,7 +104,7 @@ d3.csv("earthquakes.csv", function(error, data) {
   svg.append("g")
       .call(d3.axisLeft(y));
       
-});
+};
 };
 
 D3BarChart.prototype.setData = function( oControlHost, oDataStore )
