@@ -141,7 +141,7 @@ define(["https://d3js.org/d3.v3.min.js", "jquery"], function(d3) {
                 return name.replace(' ', '_');
             }).attr("value", function(d) {
                 return d.value;
-            }).on("mouseover", mouseover)
+            })//.on("mouseover", mouseover)
             .style("fill", function(d) {
                 return d._children ? "lightsteelblue" : "#fff";
             });
