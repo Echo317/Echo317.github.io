@@ -293,7 +293,7 @@ define(["https://d3js.org/d3.v3.min.js", "jquery"], function(d3) {
     }
 
     //***************** Mouse Over ************************/
-    function mouseover(d) {
+   /* function mouseover(d) {
         var sequenceArray = getAncestors(d);
         var sequenceCnt = sequenceArray.length - 1
 
@@ -319,7 +319,7 @@ define(["https://d3js.org/d3.v3.min.js", "jquery"], function(d3) {
             mouseleave(d);
         }
     }
-
+*/
     function mouseleave(d) {
         // Hide the breadcrumb trail
     }
