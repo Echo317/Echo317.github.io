@@ -22,7 +22,7 @@
 
  */
 
-define(["http://d3js.org/d3.v4.min.js", "jquery"], function(d3) {
+define(["text!./d3.js", "jquery"], function(d3) {
     "use strict";
 
     var myHierarchy = {};
