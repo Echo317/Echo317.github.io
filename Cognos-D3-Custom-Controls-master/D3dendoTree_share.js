@@ -46,7 +46,7 @@ define(["https://d3js.org/d3.v3.min.js", "jquery"], function(d3) {
 
     d3tree.prototype.initialize = function(oControlHost, fnDoneInitializing, oDataStore) {
         //Add CSS file reference to report.  This only contains a few simple settings that can be hard codded if needed
-        $("head link[rel='stylesheet']").last().after("<link href='http://localhost/controls/sunburst/d3tree.css' rel='stylesheet' />");
+        $("head link[rel='stylesheet']").last().after("<link href='https://Echo317.github.io/Cognos-D3-Custom-Controls-master/d3tree.css' rel='stylesheet' />");
         fnDoneInitializing();
     }
 
